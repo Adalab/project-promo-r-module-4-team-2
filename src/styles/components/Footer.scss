@@ -1,0 +1,41 @@
+@import "../core/functions.scss";
+@import "../core/variables.scss";
+@import "../core/mixin.scss";
+
+
+.footer {
+  background-color: $footer-bg-color;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+  background-image: linear-gradient(to bottom,
+      #fafafa,
+      #e9e9e9 45%, );
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.1rem rem(40) 1.2rem rem(41);
+  }
+
+  &__small {
+    font-family: $font-Open;
+    font-size: 14px;
+    color: rgba(177, 8, 8, 0.808);
+    font-weight: 700;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    margin-top: 5px;
+    max-width: rem(103);
+    max-height: rem(40);
+  }
+}

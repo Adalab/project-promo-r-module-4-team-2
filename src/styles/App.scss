@@ -1,0 +1,35 @@
+@import "core/reset";
+@import "core/variables";
+@import "core/functions";
+@import "core/_mixin.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: $font-Open;
+}
+
+// .mainCreate {
+//   background-image: linear-gradient(to bottom,
+//       #fafafa,
+//       #cacaca 7%,
+//       #fafafa 97%,
+//     );
+
+
+
+//   @media all and (min-width: 768px) {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     min-height: 80vh;
+
+//     &__card {
+//       order: 1;
+//       margin: 20px 40px 21px 0;
+//       border-radius: 6px;
+//     }
+//   }
+
+//   @media all and (min-width: 1200px) {
+//     grid-template-columns: 1fr 2fr;
+//   }
+// }

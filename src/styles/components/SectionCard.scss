@@ -1,0 +1,149 @@
+@import "../core/variables";
+@import "../core/mixin.scss";
+@import "../core/functions.scss";
+
+
+.card {
+    background: linear-gradient(-45deg, #032c18, #0b4d22, #720404, #460903);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+      
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__button {
+      background: linear-gradient(-45deg, #460903, #720404,#0b4d22, #032c18);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+      
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+      border: solid 2px white;
+      color: white;
+      margin: 38px 0 20px 0;
+      font-size: rem(12);
+      line-height: rem(20);
+      padding: rem(4) rem(12) rem(5) rem(10);
+      border-radius: 15px;
+      transform: translateX(-115%);
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    &__article {
+      background-color: $footer-bg-color;
+      padding: rem(21) 0 rem(12) 0;
+      box-shadow: 0 1px 10px 0 $black, 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+      border-radius: 2px;
+      margin-bottom: 40px;
+      width: 240px;
+  
+      &--data {
+        position: relative;
+        border-left: solid 5px;
+        .name {
+          color: $title-card-icons;
+          font-family: $font-Montse;
+          font-size: rem(18);
+          font-weight: bold;
+          text-transform: capitalize;
+          margin: 0 14px 4px 15px;
+          line-height: rem(20);
+        }
+        .text {
+          color: $text;
+          font-family: $font-Montse;
+          font-size: rem(16);
+          margin: 0 14px 4px 15px;
+          line-height: rem(20);
+        }
+      }
+      &--photo {
+        // background-image: url("https://i.pinimg.com/564x/24/cf/db/24cfdb5d60555f096183a49405c1e49e.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        margin: 10px 0;
+      }
+      &--links {
+        display: flex;
+        margin: 10px 50px 0 20px;
+        .icon {
+          color: $title-card-icons;
+          border: solid 2px $border-icon;
+          border-radius: 16px;
+          margin: 0 10px 0 0;
+          padding: rem(5) rem(6) rem(5) rem(6);
+          cursor: pointer;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+  
+  .palette1 {
+    .name {
+      color: $title-card-icons;
+    }
+    .header-card {
+      color: $start-button;
+    }
+    .icon {
+      color: $title-card-icons;
+      border-color: $border-icon;
+    }
+  }
+  
+  .palette2 {
+    .name {
+      color: $color-palette-blood;
+    }
+    .header-card {
+      color: $color-palette-red;
+    }
+    .icon {
+      border-color: $title-icons;
+      color: $color-palette-blood;
+    }
+  }
+  
+  .palette3 {
+    .name {
+      color: $color-palette-slate;
+    }
+    .header-card {
+      color: $color-palette--orange;
+    }
+    .icon {
+      border-color: $color-palette--blue;
+      color: $color-palette-slate;
+    }
+  }
+  
+  .icon:hover {
+    border: solid 2px $title-card-icons;
+  }
+
+

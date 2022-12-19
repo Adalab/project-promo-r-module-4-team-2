@@ -1,0 +1,217 @@
+@import '../core/variables';
+@import "../components/arrow.scss";
+
+.design {
+  border-bottom: solid 1px rgb(2, 65, 2);
+  margin: 27px 20px 10px 20px;
+}
+
+.fa-solid {
+  color: rgba(177, 8, 8, 0.808);
+}
+
+.fa-angle-u {
+  color: black;
+}
+
+.buttonDesign {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+
+.buttonDesign__arrow {
+  padding-right: 10px;
+
+}
+
+.buttonDesign__title {
+  text-transform: uppercase;
+  font-size: rem(18);
+  font-family: $font-Open;
+  font-weight: 700;
+  color: $text;
+  padding-left: 10px;
+}
+
+.boxDesignColorsLabel {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 24px;
+  align-items: center;
+}
+
+.colorsText {
+  text-transform: uppercase;
+  font-size: rem(14);
+  font-family: $font-Open;
+  font-weight: 700;
+  color: #114e4e;
+}
+
+//PALETA DE COLORES
+
+//PALETA 1
+
+.largeContainerDesign {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.colorsBoxOne {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  margin-right: 20px;
+  justify-content: right;
+}
+
+.mediumContainerDesign {
+  width: 100%;
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.colorPalette__container1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 10px -15px 10px 10px;
+}
+
+.rectangle__a1 {
+  width: 30px;
+  height: 25px;
+  margin-left: 10px;
+  background-color: $title-card-icons;
+  align-items: center;
+}
+
+.rectangle__a2 {
+  width: 30px;
+  height: 25px;
+  background-color: $start-button;
+  align-items: center;
+}
+
+.rectangle__a3 {
+  width: 30px;
+  height: 25px;
+  background-color: $border-icon;
+  align-items: center;
+}
+
+//PALETA DE COLORES
+
+//PALETA 2
+
+.colorsBoxTwo {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  margin-right: 20px;
+  justify-content: right;
+}
+
+.colorPalette__container2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 10px -30px 10px 10px;
+}
+
+.rectangle__b1 {
+  width: 30px;
+  height: 25px;
+  margin-left: 10px;
+  background-color: $color-palette-blood;
+}
+
+.rectangle__b2 {
+  width: 30px;
+  height: 25px;
+  background-color: $color-palette-red;
+}
+
+.rectangle__b3 {
+  width: 30px;
+  height: 25px;
+  background-color: $title-icons;
+}
+
+//PALETA DE COLORES
+
+//PALETA 3
+
+.colorsBoxThree {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  margin-right: 20px;
+  justify-content: right;
+}
+
+.colorPalette__container3 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 10px -30px 30px 10px;
+}
+
+.rectangle__c1 {
+  width: 30px;
+  height: 25px;
+  margin-left: 10px;
+  background-color: $color-palette-slate;
+}
+
+.rectangle__c2 {
+  width: 30px;
+  height: 25px;
+  background-color: $color-palette--orange;
+}
+
+.rectangle__c3 {
+  width: 30px;
+  height: 25px;
+  background-color: $color-palette--blue;
+  margin-right: 0px;
+}
+
+//MEDIA QUERIES
+
+//TABLET
+
+@media all and (min-width: 768px) {
+  .boxDesignColorsLabel {
+    margin-left: 8px;
+  }
+
+  //PALETA DE COLORES
+
+  .colorsBoxOne {
+    margin-right: 30px;
+  }
+
+  .colorsBoxTwo {
+    margin-right: 30px;
+  }
+
+  .colorsBoxThree {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-right: 30px;
+    justify-content: right;
+  }
+}

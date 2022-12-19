@@ -1,0 +1,138 @@
+@import "../core/variables.scss";
+@import "../core/functions.scss";
+@import "../components/arrow.scss";
+
+
+.fa-share-nodes {
+  color: rgba(7, 7, 7, 0.808);
+}
+
+.fa-solid {
+  color: rgba(177, 8, 8, 0.808);
+}
+
+.fa-angle-u {
+  color: rgba(8, 8, 8, 0.808);
+}
+
+.buttonShare {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 15px 10px;
+  cursor: pointer;
+
+
+  &__title {
+    text-transform: uppercase;
+    font-size: rem(18);
+    font-family: $font-Open;
+    font-weight: 700;
+    color: $text;
+  }
+}
+
+
+
+.fa-address-card {
+  color: $footer-bg-color;
+  padding-right: 10px;
+  font-size: 22px;
+  text-align: center;
+  justify-content: center;
+}
+
+.cardCreated {
+  border-top: solid 1px $border-color;
+  margin-top: 10px;
+  width: 100%;
+
+  &__div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_text {
+    margin: 4% 0 4% 0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+    color: $text;
+  }
+
+  &_link {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: rgba(177, 8, 8, 0.808);
+    padding-top: 10px;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+  }
+
+  &_button {
+    text-decoration: none;
+    background-color: $socialmedia-button;
+    color: $footer-bg-color;
+    padding: 13px 15px 13px 15px;
+    margin-bottom: 37px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+.buttonComparte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkComparte {
+  background-color: rgba(177, 8, 8, 0.808);
+  color: $footer-bg-color;
+  border: none;
+  width: 199px;
+  height: 50px;
+  margin: 33px 49px 30px 44px;
+  padding: 13px 18px 13px 17px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(18);
+  text-transform: uppercase;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+
+}
+
+.linkgrey {
+  background-color: $clicked-button;
+  color: $footer-bg-color;
+  text-decoration: none;
+  width: 199px;
+  height: 50px;
+  margin: 33px 49px 30px 44px;
+  padding: 13px 18px 13px 17px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(18);
+  text-transform: uppercase;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
+
+.share {
+  border-bottom: solid 1px rgb(2, 54, 2);
+  margin: 15px 20px 30px 20px;
+}
+
+.hidden {
+  display: none;
+}
