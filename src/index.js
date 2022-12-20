@@ -19,9 +19,14 @@ server.listen(serverPort, () => {
 
 // Escribimos los endpoints que queramos
 server.post('/card', (req, res) => {
+  //req.body
   const response = {
     success: true,
-    cardUrl: 'https://dev.adalab.es/card/16715359672539456 ',
+    cardUrl: 'https://dev.adalab.es/card/16715359672539456',
   };
   res.json(response);
+});
+
+server.get('/card/id', (req, res) => {
+  //express III
 });
