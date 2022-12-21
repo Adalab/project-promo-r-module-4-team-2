@@ -3,7 +3,6 @@ import '../styles/components/Diseña.scss';
 const Design = (prop) => {
   const handleChange = (event) => {
     prop.handleInput(event.target.value, event.target.name);
-    console.log(event.target.name);
   };
 
   const renderDesign = () => {

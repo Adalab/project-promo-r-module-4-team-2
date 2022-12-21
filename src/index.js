@@ -3,13 +3,44 @@
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require('cors');
+const { v4: uuidv4 } = require('uuid');
 
 // Creamos el servidor
 const server = express();
 
 // Configuramos el servidor
-server.use(cors());
 server.use(express.json({ limit: '25mb' }));
+server.use(cors());
+
+//creamos un array para las tarjetas
+const cards = [];
+
+// Crear la tarjeta en el servidor
+server.post('/card', (req, res) => {
+  if (req.body.palette === '' || req.body.name === '' || req.body.job === '' || req.body.photo === '' || req.body.phone === '' || req.body.email === '' || req.body.github === '' || req.body.linkedin === '') {
+    const errorMsg = {
+      success: false,
+      error: 'faltan datos'
+    }
+    res.json(errorMsg);
+  }
+  else {
+    const newCard = { id: uuidv4(), ...req.body };
+    cards.push(newCard);
+    console.log(newCard.id)
+    const idCard = newCard.id;
+    const response = {
+      success: true,
+      cardUrl: `//localhost:4000/card/:${idCard}`,
+    };
+    res.json(response);
+  }
+});
+
+server.get('/card/:id', (req, res) => {
+  res.json({ message: 'holis' });
+  //express III
+});
 
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 4000;
@@ -17,16 +48,6 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-// Escribimos los endpoints que queramos
-server.post('/card', (req, res) => {
-  //req.body
-  const response = {
-    success: true,
-    cardUrl: 'https://dev.adalab.es/card/16715359672539456',
-  };
-  res.json(response);
-});
-
-server.get('/card/id', (req, res) => {
-  //express III
-});
+//servidor estático
+const staticServerPath = './src/public-react';
+server.use(express.static(staticServerPath));

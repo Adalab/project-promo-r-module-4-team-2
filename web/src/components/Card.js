@@ -93,7 +93,7 @@ const Card = () => {
       setArrowRotateShare('');
     }
   };
-  console.log(typeof (avatar))
+
   const handleToggleShare = () => {
     // if (shareIsOpen === false) {
     setShareIsOpen(!shareIsOpen);
