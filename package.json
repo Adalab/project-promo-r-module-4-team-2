@@ -1,44 +1,28 @@
 {
-  "name": "react-starter-kit",
-  "homepage": "./",
-  "version": "0.1.0",
-  "private": true,
+  "name": "package-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/build ./src/public-react"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adalab/project-promo-r-module-4-team-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adalab/project-promo-r-module-4-team-2/issues"
+  },
+  "homepage": "https://github.com/Adalab/project-promo-r-module-4-team-2#readme",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "node-sass": "^8.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.4",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "githubpages": "rm -rf build && rm -rf docs && npm run build && mv build docs && git add docs/* && git commit -m \"Publish in GitHub Pages\" && git push"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "uuid": "^9.0.0"
   }
 }
