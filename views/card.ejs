@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- REVISAR -->
+    <link
+      rel="stylesheet"
+      href="http://localhost:4000/assets/styles/cardStyle.css"
+    />
     <title>Document</title>
-</head>
-<body>
-    <article
-        className={`js_card_article card__article palette${props.valuePalette}`}
-      >
-        <div className="header-card card__article--data">
-          <h2 className="name js_card_name">
-            <%= name %>
-          </h2>
-          <h3 className="text js_card_job">
-            <%= job %>
-          </h3>
+  </head>
+  <body>
+    <section class="mainCreate__card card">
+      <article class="js_card_article card__article palette2">
+        <div class="header-card card__article--data">
+          <h2 class="name js_card_name"><%= name %></h2>
+          <h3 class="text js_card_job"><%= job %></h3>
         </div>
-        <Profile avatar={props.avatar} />
-        <nav className="card__article--links">
-          <a className="js_card_phone" href={`tel:<%= phone %>`}>
-            <i className="fa-solid fa-mobile-screen-button icon"></i>
-          </a>
-          <a className="js_card_email" href={`mailto:<%= email%>`}>
-            <i className="fa-regular fa-envelope icon"></i>
-          </a>
-          <a
-            className="js_card_linkedin"
-            href={`www.linkedin.com/in/<%= linkedin %>`}
+        <div
+          class="card__article--photo js_card_img js__profile-image"
+          style="background-image: url (<%= photo %>)"
+        ></div>
+        <nav class="card__article--links">
+          <a class="js_card_phone" href="tel:<%= phone %> "
+            ><i class="fa-solid fa-mobile-screen-button icon"></i></a
+          ><a class="js_card_email" href="mailto:<%= email %> "
+            ><i class="fa-regular fa-envelope icon"></i></a
+          ><a
+            class="js_card_linkedin"
+            href="www.linkedin.com/in/<%= linkedin %> "
             target="_blank"
             rel="noreferrer"
-          >
-            <i className="fa-brands fa-linkedin-in icon"></i>
-          </a>
-          <a
-            className="js_card_github"
-            href={`https://github.com/<%= github %>`}
+            ><i class="fa-brands fa-linkedin-in icon"></i></a
+          ><a
+            class="js_card_github"
+            href="https://github.com/<%= github %> "
             target="_blank"
             rel="noreferrer"
-          >
-            <i className="fa-brands fa-github-alt icon"></i>
-          </a>
+            ><i class="fa-brands fa-github-alt icon"></i
+          ></a>
         </nav>
       </article>
-</body>
+    </section>
+  </body>
 </html>
