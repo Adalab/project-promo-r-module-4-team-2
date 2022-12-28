@@ -59,7 +59,7 @@ server.post("/card", (req, res) => {
     );
     const response = {
       success: true,
-      cardURL: `//localhost:4000/card/${idCard}`,
+      cardURL: `project-promo-r-module-4-team-2-production.up.railway.app/card/${idCard}`,
     };
     // console.log(response);
     res.json(response);

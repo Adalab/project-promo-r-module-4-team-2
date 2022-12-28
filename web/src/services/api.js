@@ -1,6 +1,6 @@
 function localCard(userData) {
   console.log(userData)
-  return fetch('http://localhost:4000/card', {
+  return fetch('/card', {
     method: 'POST', // Para enviar datos
     body: JSON.stringify(userData),
     headers: {
