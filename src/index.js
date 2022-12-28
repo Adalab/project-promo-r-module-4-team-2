@@ -42,7 +42,9 @@ server.post('/card', (req, res) => {
     cards.push(newCard);
     // console.log(cards);
     // console.log(newCard.id);
+    const queryInsert = db.prepare('INSERT INTO cards(id, palette, name, job, photo, phone, email, github, linkedin) VALUES (?,?,?,?,?,?,?,?,?)');
     const idCard = newCard.id;
+    const result = queryInsert.run(newCard.id, newCard.palette, newCard.name, newCard.job, newCard.photo, newCard.phone, newCard.email, newCard.github, newCard.linkedin)
     const response = {
       success: true,
       cardURL: `//localhost:4000/card/${idCard}`,
@@ -52,13 +54,10 @@ server.post('/card', (req, res) => {
   }
 });
 
-// A REVISAR
+//Rutas dinámicas 
 server.get('/card/:id', (req, res) => {
   const query = db.prepare('SELECT * FROM cards WHERE id=?');
   const foundCards = query.get(req.params.id);
-  // console.log(cards);
-  // console.log(req.params);
-  // const foundCards = cards.find((card) => `:${card.id}` === req.params.id);
   console.log(foundCards);
   res.render('card', foundCards);
 });
@@ -72,3 +71,6 @@ server.listen(serverPort, () => {
 //servidor estático
 const staticServerPath = './src/public-react';
 server.use(express.static(staticServerPath));
+//servidor estático para el css
+const staticServerCssPath = './src/public-css';
+server.use(express.static(staticServerCssPath));
